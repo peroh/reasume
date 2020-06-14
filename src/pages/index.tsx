@@ -2,8 +2,8 @@ import React, { useRef } from 'react'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import styled from 'styled-components';
 
-import Layout from '../components/layout';
-import { ThemeContext } from '../components/layout';
+import Layout from '../components/Layout';
+import { ThemeContext } from '../components/ThemeContext';
 
 interface IndexPageProps {
   data: {
@@ -25,6 +25,10 @@ const DarkModeToggle = () => {
   const { colorMode, setColorMode } = React.useContext(
     ThemeContext
   );
+  if (!colorMode) {
+    return null;
+  }
+
   const isDark = colorMode === "dark";
 
   return (

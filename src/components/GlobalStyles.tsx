@@ -1,0 +1,10 @@
+import { createGlobalStyle, ThemeProvider } from "styled-components"
+
+export const GlobalStyles = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-background);
+    color: var(--color-text);
+  }
+`
