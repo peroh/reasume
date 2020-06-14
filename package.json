@@ -12,6 +12,7 @@
     "gatsby": "^2.23.3",
     "gatsby-link": "^2.4.6",
     "gatsby-plugin-react-helmet": "^3.3.4",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-styled-components": "^3.3.4",
     "gatsby-plugin-typescript": "^2.4.6",
     "react-spring": "^8.0.27",

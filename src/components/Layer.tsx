@@ -10,6 +10,7 @@ const Layer = styled(ParallaxLayer)<LayerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   background-color: ${({ theme, bgColor }) => (
     bgColor ? bgColor : theme.colors.bg
   )};
