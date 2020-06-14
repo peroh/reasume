@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { theme } from '../contants/theme';
+import { theme } from '../constants/theme';
 
 export const StyledThemeProvider = ({ children }: any) => (
   <ThemeProvider theme={theme}>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ColorModeThemeProvider } from './ThemeContext';
 import { GlobalStyles } from './GlobalStyles';
-import { theme } from '../contants/theme';
+import { theme } from '../constants/theme';
 import { StyledThemeProvider } from './StyledThemeContext';
 
 function App({ children }: any) {

@@ -1,47 +1,45 @@
-import * as React from 'react';
+import React, { useEffect, useMemo } from 'react';
 
-import { COLORS } from '../contants/colors';
+import {
+  COLORS,
+  COLOR_MODE_KEY,
+  INITIAL_COLOR_MODE_CSS_PROP,
+} from '../constants/colors';
 
 export const ThemeContext = React.createContext(null);
 
 export const ColorModeThemeProvider = ({ children }: any) => {
-  const [
-    colorMode,
-    rawSetColorMode
-  ] = React.useState(undefined);
+  const [colorMode, rawSetColorMode] = React.useState(undefined);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const root = window.document.documentElement;
-    const initialColorValue =
-      root.style.getPropertyValue('--initial-color-mode');
+    const initialColorValue = root.style.getPropertyValue(
+      INITIAL_COLOR_MODE_CSS_PROP
+    );
+
     rawSetColorMode(initialColorValue);
   }, []);
-  const setColorMode = (newValue: any) => {
-    const root = window.document.documentElement;
-    rawSetColorMode(newValue);
-    localStorage.setItem('color-mode', newValue);
-    root.style.setProperty(
-      '--color-text',
-      newValue === 'light'
-        ? COLORS.light.text
-        : COLORS.dark.text
-    );
-    root.style.setProperty(
-      '--color-background',
-      newValue === 'light'
-        ? COLORS.light.background
-        : COLORS.dark.background
-    );
-    root.style.setProperty(
-      '--color-primary',
-      newValue === 'light'
-        ? COLORS.light.primary
-        : COLORS.dark.primary
-    );
-  }
+
+  const contextValue = useMemo(() => {
+    function setColorMode(newValue: any) {
+      const root = window.document.documentElement;
+      localStorage.setItem(COLOR_MODE_KEY, newValue);
+      Object.entries(COLORS).forEach(([name, colorByTheme]: any) => {
+        const cssVarName = `--color-${name}`;
+        root.style.setProperty(cssVarName, colorByTheme[newValue]);
+      });
+
+      rawSetColorMode(newValue);
+    }
+
+    return {
+      colorMode,
+      setColorMode,
+    };
+  }, [colorMode, rawSetColorMode]);
 
   return (
-    <ThemeContext.Provider value={{ colorMode, setColorMode }}>
+    <ThemeContext.Provider value={contextValue}>
       {children}
     </ThemeContext.Provider>
   )

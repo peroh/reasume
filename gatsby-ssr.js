@@ -1,58 +1,54 @@
+/* Credit to: https://github.com/joshwcomeau/dark-mode-minimal 🙏 */
+
 import React from 'react';
 
-import { COLORS } from './src/contants/colors';
+import {
+  COLOR_MODE_KEY,
+  COLORS,
+  INITIAL_COLOR_MODE_CSS_PROP,
+} from './src/constants/colors';
 
-const ColourModeScriptTag = () => {
-  let codeToRunOnClient = `
-(function() {
-  function getInitialColorMode() {
-    const persistedColorPreference =
-      window.localStorage.getItem('color-mode');
-    const hasPersistedPreference =
-      typeof persistedColorPreference === 'string';
-    if (hasPersistedPreference) {
-      return persistedColorPreference;
-    }
-    const mql = window.matchMedia('(prefers-color-scheme: dark)');
-    const hasMediaQueryPreference = typeof mql.matches === 'boolean';
-    if (hasMediaQueryPreference) {
-      return mql.matches ? 'dark' : 'light';
-    }
-    return 'light';
+function setColorsByTheme() {
+  const colors = '🎨';
+  const colorModeKey = '🗝';
+  const colorModeCssProp = '💥';
+
+  const mql = window.matchMedia('(prefers-color-scheme: dark)');
+  const prefersDarkFromMQ = mql.matches;
+  const persistedPreference = localStorage.getItem(colorModeKey);
+
+  let colorMode = 'light';
+
+  const hasUsedToggle = typeof persistedPreference === 'string';
+
+  if (hasUsedToggle) {
+    colorMode = persistedPreference;
+  } else {
+    colorMode = prefersDarkFromMQ ? 'dark' : 'light';
   }
 
-  const colorMode = getInitialColorMode();
-  const root = document.documentElement;
+  let root = document.documentElement;
 
-  root.style.setProperty(
-    '--color-text',
-    colorMode === 'light'
-      ? '${COLORS.light.text}'
-      : '${COLORS.dark.text}'
-  );
+  root.style.setProperty(colorModeCssProp, colorMode);
 
-  root.style.setProperty(
-    '--color-background',
-    colorMode === 'light'
-      ? '${COLORS.light.background}'
-      : '${COLORS.dark.background}'
-  );
+  Object.entries(colors).forEach(([name, colorByTheme]) => {
+    const cssVarName = `--color-${name}`;
 
-  root.style.setProperty(
-    '--color-primary',
-    colorMode === 'light'
-      ? '${COLORS.light.primary}'
-      : '${COLORS.dark.primary}'
-  );
+    root.style.setProperty(cssVarName, colorByTheme[colorMode]);
+  });
+}
 
-  root.style.setProperty('--initial-color-mode', colorMode);
-})()`;
-  return (
-    <script
-      dangerouslySetInnerHTML={{ __html: codeToRunOnClient }}
-    />
-  );
+const ColorModeScriptTag = () => {
+  const boundFn = String(setColorsByTheme)
+    .replace("'🎨'", JSON.stringify(COLORS))
+    .replace('🗝', COLOR_MODE_KEY)
+    .replace('💥', INITIAL_COLOR_MODE_CSS_PROP);
+
+  const calledFunction = `(${boundFn})()`;
+
+  return <script dangerouslySetInnerHTML={{ __html: calledFunction }} />;
 };
+
 export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents(<ColourModeScriptTag />);
+  setPreBodyComponents(<ColorModeScriptTag />);
 };
