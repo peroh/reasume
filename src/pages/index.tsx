@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef } from "react";
 import { Parallax } from "react-spring/renderprops-addons";
 import { useMediaQueries } from "@react-hook/media-query";
 
