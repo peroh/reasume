@@ -10,6 +10,12 @@ const Button = styled.button`
 `
 
 const DarkModeToggle = () => {
+  const themeContext = useContext(
+    ThemeContext
+  );
+  if (!themeContext) {
+    return null;
+  }
   const { colorMode, setColorMode } = useContext(
     ThemeContext
   );
