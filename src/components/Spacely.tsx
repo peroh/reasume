@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 
 import Layer from './Layer';
 import { shapes } from '../constants/shapes';
@@ -16,9 +17,11 @@ type RotationsProps = {
 const { diagonalPolygonRight } = shapes;
 
 const Spacely = ({ offset, speed, factor = 1 }: RotationsProps) => {
+  const styledContext = useContext(ThemeContext);
+  const bgColor = styledContext.colors.bgTertiary;
 
   return (
-    <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonRight} bgColor="green">
+    <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonRight} bgColor={bgColor}>
       <Container>
         <Rotation title="Spacely" Learnings={Learnings} Work={Work} />
       </Container>

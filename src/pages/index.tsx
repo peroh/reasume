@@ -25,7 +25,7 @@ const Main = (props: IndexPageProps, context: any) => {
     <Layout>
       <Parallax pages={4} ref={parallax}>
         <Hero offset={0} speed={0.2} />
-        <Rotations offset={1} speed={-0.2} />
+        {/* <Rotations offset={1} speed={-0.2} /> */}
         <Media offset={2} speed={0.5} />
         <Spacely offset={3} speed={0.5} />
       </Parallax>

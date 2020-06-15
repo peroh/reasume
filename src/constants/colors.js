@@ -4,8 +4,16 @@ export const COLORS = {
     dark: "white"
   },
   background: {
-    light: "lightgray",
-    dark: "darkslategray"
+    light: "#F7FAFC",
+    dark: "#141821"
+  },
+  backgroundSecondary: {
+    light: "#EDF2F7",
+    dark: "#2D3748"
+  },
+  backgroundTertiary: {
+    light: "#E9E9E9",
+    dark: "#30304C"
   },
   primary: {
     light: "blue",

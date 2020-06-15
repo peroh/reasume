@@ -13,8 +13,8 @@ const { diagonalPolygonRight } = shapes;
 
 const Rotations = ({ offset, speed, factor = 1 }: RotationsProps) => {
   return (
-    <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonRight} bgColor="blue">
-      <h1>Rotations content</h1>
+    <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonRight} bgColor="lightsalmon">
+      <h1>Placeholder content</h1>
     </Layer>
   )
 };
