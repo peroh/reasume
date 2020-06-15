@@ -5,8 +5,8 @@ import Layer from "./Layer";
 import { shapes } from "../constants/shapes";
 import Rotation from "./Rotation";
 import Container from "./Container";
-import Learnings from "../data/SpacelyLearnings";
-import Work from "../data/SpacelyWork";
+import Learnings from "../data/SpacelyLearnings.mdx";
+import Work from "../data/SpacelyWork.mdx";
 
 type RotationsProps = {
   offset: number;

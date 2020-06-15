@@ -5,8 +5,8 @@ import Layer from "./Layer";
 import { shapes } from "../constants/shapes";
 import Rotation from "./Rotation";
 import Container from "./Container";
-import Learnings from "../data/MediaLearnings";
-import Work from "../data/MediaWork";
+import Learnings from "../data/MediaLearnings.mdx";
+import Work from "../data/MediaWork.mdx";
 
 type RotationsProps = {
   offset: number;

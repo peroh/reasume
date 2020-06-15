@@ -3,12 +3,10 @@ import styled, { css } from "styled-components";
 import { MDXProvider } from "@mdx-js/react";
 import { media } from "../constants/breakpoints";
 
-// import Learnings from '../data/Learnings.mdx'
-
 type RotationsProps = {
   title: String;
-  Learnings: React.ReactNode;
-  Work: React.ReactNode;
+  Learnings: React.ComponentType;
+  Work: React.ComponentType;
 };
 
 const Container = styled.div`

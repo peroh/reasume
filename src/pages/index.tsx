@@ -1,6 +1,5 @@
 import React, { useRef, useContext } from "react";
 import { Parallax } from "react-spring/renderprops-addons";
-import { ThemeContext } from "styled-components";
 import { useMediaQueries } from "@react-hook/media-query";
 
 import { mediaSizes } from "../constants/breakpoints";
@@ -30,7 +29,7 @@ const FACTORS = {
 
 const Main = (props: IndexPageProps, context: any) => {
   const parallax = useRef(null);
-  const scroll = (to: any) => parallax.current.scrollTo(to);
+  const scroll = (to: number) => parallax.current.scrollTo(to);
   const { matches } = useMediaQueries(mediaSizes);
 
   return (
