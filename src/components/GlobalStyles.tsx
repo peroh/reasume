@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   h3 {
     font-family: oswald, sans-serif;
-    color: var(--color-text);
+    color: var(--color-accent1);
     text-transform: uppercase;
   }
 `

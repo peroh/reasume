@@ -1,3 +1,8 @@
+export const colorDefs = {
+  pink: "#FF10BC",
+  aquaMarine: "#A8FFCB"
+}
+
 export const COLORS = {
   text: {
     light: "black",
@@ -18,6 +23,10 @@ export const COLORS = {
   primary: {
     light: "blue",
     dark: "red"
+  },
+  accent1: {
+    light: colorDefs.pink,
+    dark: colorDefs.aquaMarine
   }
 }
 

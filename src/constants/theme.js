@@ -4,6 +4,7 @@ export const theme = {
     bgSecondary: "var(--color-backgroundSecondary)",
     bgTertiary: "var(--color-backgroundTertiary)",
     primary: "var(--color-primary)",
-    text: "var(--color-text)"
+    text: "var(--color-text)",
+    accent1: "var(--color-accent1)"
   }
 }
