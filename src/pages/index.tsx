@@ -1,11 +1,11 @@
 import React, { useRef } from 'react'
-import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
-import styled from 'styled-components';
+import { Parallax } from 'react-spring/renderprops-addons'
 
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Rotations from '../components/Rotations';
-import Rotations1 from '../components/Rotations1';
+import Media from '../components/Media';
+import Spacely from '../components/Spacely';
 
 interface IndexPageProps {
   data: {
@@ -23,10 +23,11 @@ const Main = (props: IndexPageProps, context: any) => {
 
   return (
     <Layout>
-      <Parallax pages={3} ref={parallax}>
+      <Parallax pages={4} ref={parallax}>
         <Hero offset={0} speed={0.2} />
         <Rotations offset={1} speed={-0.2} />
-        <Rotations1 offset={2} speed={0.5} />
+        <Media offset={2} speed={0.5} />
+        <Spacely offset={3} speed={0.5} />
       </Parallax>
     </Layout>
   )

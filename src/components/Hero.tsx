@@ -4,21 +4,13 @@ import { ParallaxLayer } from 'react-spring/renderprops-addons';
 
 import Layer from './Layer';
 import Logo from '../images/rea-logo.svg';
+import Container from './Container';
 
 type HeroProps = {
   offset: number,
   speed: number,
   factor?: number
 }
-
-const Container = styled.div`
-  width: 100%;
-  max-width: 1000px;
-  text-align: left;
-  padding: 5rem;
-  display: flex;
-  align-items: center;
-`
 
 const ReaLogo = styled(Logo)`
   margin-right: 1rem;

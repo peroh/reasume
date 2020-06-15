@@ -2,6 +2,10 @@ import React from 'react'
 
 import Layer from './Layer';
 import { shapes } from '../constants/shapes';
+import Rotation from './Rotation';
+import Container from './Container';
+import Learnings from "../data/MediaLearnings";
+import Work from "../data/MediaWork";
 
 type RotationsProps = {
   offset: number,
@@ -11,12 +15,15 @@ type RotationsProps = {
 
 const { diagonalPolygonLeft } = shapes;
 
-const Rotations1 = ({ offset, speed, factor = 1 }: RotationsProps) => {
+const Media = ({ offset, speed, factor = 1 }: RotationsProps) => {
+
   return (
     <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonLeft} bgColor="green">
-      <h1>Rotations content</h1>
+      <Container>
+        <Rotation title="Media" Learnings={Learnings} Work={Work} />
+      </Container>
     </Layer>
   )
 };
 
-export default Rotations1;
+export default Media;
