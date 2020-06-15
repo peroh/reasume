@@ -1,3 +1,4 @@
+import React from "react";
 import { ParallaxLayer } from "react-spring/renderprops-addons";
 import styled from "styled-components";
 
@@ -6,7 +7,9 @@ type LayerProps = {
   bgColor?: String;
 };
 
-const Layer = styled(ParallaxLayer)<LayerProps>`
+const Layer = styled(({ bgColor, clipPath, ...rest }) => (
+  <ParallaxLayer {...rest} />
+))<LayerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
