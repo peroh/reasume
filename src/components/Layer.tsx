@@ -11,9 +11,11 @@ const Layer = styled(ParallaxLayer)<LayerProps>`
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: ${({ theme, bgColor }) => (
-    bgColor ? bgColor : theme.colors.bg
-  )};
+
+  ${({ bgColor }) => bgColor && `
+    background-color: ${bgColor};
+  `};
+
   ${({ clipPath }) => clipPath && `
     clip-path: ${clipPath};
   `}

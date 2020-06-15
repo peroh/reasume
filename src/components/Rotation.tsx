@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { MDXProvider } from "@mdx-js/react"
+import { media } from '../constants/breakpoints';
 
 // import Learnings from '../data/Learnings.mdx'
 
@@ -11,7 +12,8 @@ type RotationsProps = {
 }
 
 const Container = styled.div`
-  width: 100%;
+  padding: 2rem;
+  overflow: auto;
 `;
 
 const Title = styled.h1`
@@ -25,17 +27,34 @@ const Separator = styled.div`
 
 const Content = styled.div`
   display: flex;
+  flex-direction: column;
+
+  ${media.md.css`
+    flex-direction: row;
+  `}
 `
 
 const List = styled.ul`
   list-style: none;
   padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0rem 1rem 0.5rem 1rem;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "–";
+      transform: translateX(-15px);
+    }
+  }
 `
 
 const SubContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-basis: 50%;
+  ${media.md && css`
+    flex-basis: 50%;
+  `}
 `
 
 const HighlightedText = styled.span`

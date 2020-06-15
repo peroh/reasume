@@ -21,11 +21,14 @@ const Media = ({ offset, speed, factor = 1 }: RotationsProps) => {
   const bgColor = styledContext.colors.bgSecondary;
 
   return (
-    <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonLeft} bgColor={bgColor}>
-      <Container>
-        <Rotation title="Media" Learnings={Learnings} Work={Work} />
-      </Container>
-    </Layer>
+    <>
+      <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonLeft} bgColor={bgColor} />
+      <Layer offset={offset} speed={speed + 0.2} factor={factor}>
+        <Container>
+          <Rotation title="Media" Learnings={Learnings} Work={Work} />
+        </Container>
+      </Layer>
+    </>
   )
 };
 

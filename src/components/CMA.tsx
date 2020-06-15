@@ -18,14 +18,17 @@ const { diagonalPolygonLeft } = shapes;
 
 const CMA = ({ offset, speed, factor = 1 }: RotationsProps) => {
   const styledContext = useContext(ThemeContext);
-  const bgColor = styledContext.colors.bgTertiary;
+  const bgColor = styledContext.colors.bgSecondary;
 
   return (
-    <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonLeft} bgColor={bgColor}>
-      <Container>
-        <Rotation title="CMA" Learnings={Learnings} Work={Work} />
-      </Container>
-    </Layer>
+    <>
+      <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonLeft} bgColor={bgColor} />
+      <Layer offset={offset} speed={speed - 0.2} factor={factor}>
+        <Container>
+          <Rotation title="CMA" Learnings={Learnings} Work={Work} />
+        </Container>
+      </Layer>
+    </>
   )
 };
 

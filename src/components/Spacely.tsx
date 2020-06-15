@@ -21,11 +21,14 @@ const Spacely = ({ offset, speed, factor = 1 }: RotationsProps) => {
   const bgColor = styledContext.colors.bgTertiary;
 
   return (
-    <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonRight} bgColor={bgColor}>
-      <Container>
-        <Rotation title="Spacely" Learnings={Learnings} Work={Work} />
-      </Container>
-    </Layer>
+    <>
+      <Layer offset={offset} speed={speed} factor={factor} clipPath={diagonalPolygonRight} bgColor={bgColor} />
+      <Layer offset={offset} speed={speed + 0.2} factor={factor}>
+        <Container>
+          <Rotation title="Spacely" Learnings={Learnings} Work={Work} />
+        </Container>
+      </Layer>
+    </>
   )
 };
 
