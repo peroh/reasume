@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 import Rotations from '../components/Rotations';
 import Media from '../components/Media';
 import Spacely from '../components/Spacely';
+import CMA from '../components/CMA';
 
 interface IndexPageProps {
   data: {
@@ -23,11 +24,12 @@ const Main = (props: IndexPageProps, context: any) => {
 
   return (
     <Layout>
-      <Parallax pages={4} ref={parallax}>
+      <Parallax pages={5} ref={parallax}>
         <Hero offset={0} speed={0.2} />
-        {/* <Rotations offset={1} speed={-0.2} /> */}
+        <Rotations offset={1} speed={-0.2} />
         <Media offset={2} speed={0.5} />
         <Spacely offset={3} speed={0.5} />
+        <CMA offset={4} speed={0.5} />
       </Parallax>
     </Layout>
   )
