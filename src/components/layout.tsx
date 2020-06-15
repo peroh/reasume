@@ -1,5 +1,5 @@
-import * as React from 'react'
-import DarkModeToggle from '../components/DarkModeToggle';
+import * as React from "react";
+import DarkModeToggle from "../components/DarkModeToggle";
 
 const Layout = ({ children }: any) => {
   return (
@@ -7,7 +7,7 @@ const Layout = ({ children }: any) => {
       <DarkModeToggle />
       {children}
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

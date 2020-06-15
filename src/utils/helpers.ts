@@ -6,4 +6,4 @@ export const getFactor = (multiplier: number, matches: any, factors: any) => {
   } else {
     return factors.tablet * multiplier;
   }
-}
+};

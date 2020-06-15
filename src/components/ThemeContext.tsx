@@ -1,10 +1,10 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo } from "react";
 
 import {
   COLORS,
   COLOR_MODE_KEY,
   INITIAL_COLOR_MODE_CSS_PROP,
-} from '../constants/colors';
+} from "../constants/colors";
 
 export const ThemeContext = React.createContext(null);
 
@@ -42,5 +42,5 @@ export const ColorModeThemeProvider = ({ children }: any) => {
     <ThemeContext.Provider value={contextValue}>
       {children}
     </ThemeContext.Provider>
-  )
-}
+  );
+};

@@ -1,10 +1,10 @@
-import { ParallaxLayer } from 'react-spring/renderprops-addons';
-import styled from 'styled-components';
+import { ParallaxLayer } from "react-spring/renderprops-addons";
+import styled from "styled-components";
 
 type LayerProps = {
   clipPath?: String;
   bgColor?: String;
-}
+};
 
 const Layer = styled(ParallaxLayer)<LayerProps>`
   display: flex;
@@ -12,11 +12,15 @@ const Layer = styled(ParallaxLayer)<LayerProps>`
   align-items: center;
   position: relative;
 
-  ${({ bgColor }) => bgColor && `
+  ${({ bgColor }) =>
+    bgColor &&
+    `
     background-color: ${bgColor};
   `};
 
-  ${({ clipPath }) => clipPath && `
+  ${({ clipPath }) =>
+    clipPath &&
+    `
     clip-path: ${clipPath};
   `}
 `;

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { ColorModeThemeProvider } from './ThemeContext';
-import { GlobalStyles } from './GlobalStyles';
-import { theme } from '../constants/theme';
-import { StyledThemeProvider } from './StyledThemeContext';
+import { ColorModeThemeProvider } from "./ThemeContext";
+import { GlobalStyles } from "./GlobalStyles";
+import { theme } from "../constants/theme";
+import { StyledThemeProvider } from "./StyledThemeContext";
 
 function App({ children }: any) {
   return (

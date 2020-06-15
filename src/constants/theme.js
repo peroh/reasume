@@ -5,6 +5,6 @@ export const theme = {
     bgTertiary: "var(--color-backgroundTertiary)",
     primary: "var(--color-primary)",
     text: "var(--color-text)",
-    accent1: "var(--color-accent1)"
-  }
-}
+    accent1: "var(--color-accent1)",
+  },
+};

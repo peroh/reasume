@@ -1,29 +1,28 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { MDXProvider } from "@mdx-js/react"
-import { media } from '../constants/breakpoints';
+import React from "react";
+import styled, { css } from "styled-components";
+import { MDXProvider } from "@mdx-js/react";
+import { media } from "../constants/breakpoints";
 
 // import Learnings from '../data/Learnings.mdx'
 
 type RotationsProps = {
-  title: String,
-  Learnings: React.ReactNode,
-  Work: React.ReactNode
-}
+  title: String;
+  Learnings: React.ReactNode;
+  Work: React.ReactNode;
+};
 
 const Container = styled.div`
   padding: 2rem;
   overflow: auto;
 `;
 
-const Title = styled.h1`
-`
+const Title = styled.h1``;
 
 const Separator = styled.div`
   width: 100%;
   height: 2px;
   background-color: white;
-`
+`;
 
 const Content = styled.div`
   display: flex;
@@ -32,7 +31,7 @@ const Content = styled.div`
   ${media.md.css`
     flex-direction: row;
   `}
-`
+`;
 
 const List = styled.ul`
   list-style: none;
@@ -49,22 +48,23 @@ const List = styled.ul`
       transform: translateX(-15px);
     }
   }
-`
+`;
 
 const SubContent = styled.div`
-  ${media.md && css`
+  ${media.md &&
+  css`
     flex-basis: 50%;
   `}
-`
+`;
 
 const HighlightedText = styled.span`
   color: pink;
-`
+`;
 
 const components = {
   ul: List,
-  highlight: HighlightedText
-}
+  highlight: HighlightedText,
+};
 
 const Rotation = ({ title, Learnings, Work }: RotationsProps) => {
   return (
@@ -84,7 +84,7 @@ const Rotation = ({ title, Learnings, Work }: RotationsProps) => {
         </Content>
       </Container>
     </MDXProvider>
-  )
-}
+  );
+};
 
 export default Rotation;

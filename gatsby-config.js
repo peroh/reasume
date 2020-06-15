@@ -10,13 +10,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `playfair display`,
-          `source sans pro`,
-          'oswald'
-        ],
-        display: 'swap'
-      }
+        fonts: [`playfair display`, `source sans pro`, "oswald"],
+        display: "swap",
+      },
     },
     `gatsby-plugin-mdx`,
     `gatsby-transformer-yaml`,
@@ -27,4 +23,4 @@ module.exports = {
       },
     },
   ],
-}
+};
