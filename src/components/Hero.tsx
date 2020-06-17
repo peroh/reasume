@@ -39,11 +39,6 @@ const Hero = ({ offset, speed, factor = 1 }: HeroProps) => {
             <h2>Graduate Developer (UI)</h2>
           </div>
         </HeroContainer>
-        <ParallaxLayer
-          offset={0.4}
-          speed={-0.3}
-          factor={factor}
-        ></ParallaxLayer>
       </Layer>
     </>
   );
