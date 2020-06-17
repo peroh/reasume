@@ -1,13 +1,7 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
+import Toggle from "react-dark-mode-toggle";
 
 import { ThemeContext } from "./ThemeContext";
-
-const Button = styled.button`
-  background-color: ${({ theme }) => theme.colors.bg};
-  color: var(--color-text);
-  border: 1px solid var(--color-primary);
-`;
 
 const DarkModeToggle = () => {
   const themeContext = useContext(ThemeContext);
@@ -22,13 +16,13 @@ const DarkModeToggle = () => {
   const isDark = colorMode === "dark";
 
   return (
-    <Button
-      onClick={() => {
+    <Toggle
+      onChange={() => {
         isDark ? setColorMode("light") : setColorMode("dark");
       }}
-    >
-      {isDark ? "Dark Mode" : "Light Mode"}
-    </Button>
+      checked={isDark}
+      size={60}
+    />
   );
 };
 
