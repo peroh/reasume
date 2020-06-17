@@ -1,2 +1,8 @@
-data:
-  - todo
+projects:
+  - title: Carry Through Covid
+    content: Lead development on a nonprofit platform to help small businesses throughout the COVID-19 lockdowns.
+    github: https://github.com/carrythroughcovid
+    website: https://carrythroughcovid.com
+  - title: The Oracle
+    content: Lead development on a sports tipping platform with 160 current users.
+    website: https://theoracle.app

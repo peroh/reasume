@@ -9,3 +9,8 @@ declare module "*.svg" {
   let SVGComponent: (props: any) => JSX.Element;
   export default SVGComponent;
 }
+
+declare module "*.yaml" {
+  let SVGComponent: (props: any) => JSX.Element;
+  export default SVGComponent;
+}

@@ -11,6 +11,9 @@ export const GlobalStyles = createGlobalStyle`
   h1 {
     font-family: "playfair display", serif;
   }
+  h2 {
+    text-transform: uppercase;
+  }
   h3 {
     font-family: oswald, sans-serif;
     color: var(--color-accent1);

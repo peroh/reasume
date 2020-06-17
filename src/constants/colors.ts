@@ -1,6 +1,10 @@
 export const colorDefs = {
   pink: "#FF10BC",
   aquaMarine: "#A8FFCB",
+  roman: "#DD5454",
+  mango: "#FAC45D",
+  viking: "#54BCDD",
+  shamrock: "#4ED0A1",
 };
 
 export const COLORS = {
