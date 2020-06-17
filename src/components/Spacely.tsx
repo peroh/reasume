@@ -31,7 +31,7 @@ const Spacely = ({ offset, speed, factor = 1 }: RotationsProps) => {
       />
       <Layer offset={offset} speed={speed + 0.2} factor={factor}>
         <Container>
-          <Rotation title="Spacely" Learnings={Learnings} Work={Work} />
+          <Rotation title="2 - Spacely" Learnings={Learnings} Work={Work} />
         </Container>
       </Layer>
     </>

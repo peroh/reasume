@@ -31,7 +31,7 @@ const Media = ({ offset, speed, factor = 1 }: RotationsProps) => {
       />
       <Layer offset={offset} speed={speed + 0.2} factor={factor}>
         <Container>
-          <Rotation title="Media" Learnings={Learnings} Work={Work} />
+          <Rotation title="1️ - Media" Learnings={Learnings} Work={Work} />
         </Container>
       </Layer>
     </>

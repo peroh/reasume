@@ -31,7 +31,7 @@ const CMA = ({ offset, speed, factor = 1 }: RotationsProps) => {
       />
       <Layer offset={offset} speed={speed - 0.2} factor={factor}>
         <Container>
-          <Rotation title="CMA" Learnings={Learnings} Work={Work} />
+          <Rotation title="3 - CMA" Learnings={Learnings} Work={Work} />
         </Container>
       </Layer>
     </>
