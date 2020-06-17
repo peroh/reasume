@@ -7,6 +7,8 @@ import Rotation from "./Rotation";
 import Container from "./Container";
 import Learnings from "../data/SpacelyLearnings.mdx";
 import Work from "../data/SpacelyWork.mdx";
+import ReactLogo from "../images/react-logo.svg";
+import CssLogo from "../images/css.svg";
 
 type RotationsProps = {
   offset: number;
@@ -31,7 +33,12 @@ const Spacely = ({ offset, speed, factor = 1 }: RotationsProps) => {
       />
       <Layer offset={offset} speed={speed + 0.2} factor={factor}>
         <Container>
-          <Rotation title="2 - Spacely" Learnings={Learnings} Work={Work} />
+          <Rotation
+            title="2 - Spacely"
+            Learnings={Learnings}
+            icons={[ReactLogo, CssLogo]}
+            Work={Work}
+          />
         </Container>
       </Layer>
     </>

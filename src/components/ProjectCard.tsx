@@ -31,6 +31,10 @@ const Title = styled.h2`
   margin: 0;
 `;
 
+const Info = styled.div`
+  color: white;
+`;
+
 const Links = styled.div`
   display: flex;
 `;
@@ -62,10 +66,10 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <Container background={background}>
-      <div>
+      <Info>
         <Title>{title}</Title>
         <p>{content}</p>
-      </div>
+      </Info>
       <Links>
         {website && <Link Icon={WebsiteImage} text="View" link={website} />}
         {github && <Link Icon={GithubImage} text="Source" link={github} />}

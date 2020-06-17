@@ -5,10 +5,9 @@ import Layer from "./Layer";
 import { shapes } from "../constants/shapes";
 import Rotation from "./Rotation";
 import Container from "./Container";
-import Learnings from "../data/MediaLearnings.mdx";
-import Work from "../data/MediaWork.mdx";
-import SwiftLogo from "../images/swift.svg";
-import JavascriptLogo from "../images/javascript.svg";
+import Experience from "../data/Experience.mdx";
+import Interests from "../data/Interests.mdx";
+import Section from "./Section";
 
 type RotationsProps = {
   offset: number;
@@ -18,7 +17,7 @@ type RotationsProps = {
 
 const { diagonalPolygonLeft } = shapes;
 
-const Media = ({ offset, speed, factor = 1 }: RotationsProps) => {
+const CMA = ({ offset, speed, factor = 1 }: RotationsProps) => {
   const styledContext = useContext(ThemeContext);
   const bgColor = styledContext.colors.bgSecondary;
 
@@ -31,13 +30,14 @@ const Media = ({ offset, speed, factor = 1 }: RotationsProps) => {
         clipPath={diagonalPolygonLeft}
         bgColor={bgColor}
       />
-      <Layer offset={offset} speed={speed + 0.2} factor={factor}>
+      <Layer offset={offset} speed={speed - 0.2} factor={factor}>
         <Container>
-          <Rotation
-            title="1️ - Media"
-            Learnings={Learnings}
-            Work={Work}
-            icons={[SwiftLogo, JavascriptLogo]}
+          <Section
+            title="More about me"
+            subTitle1="Pre-REA"
+            subTitle2="Outside of Work"
+            Component1={Experience}
+            Component2={Interests}
           />
         </Container>
       </Layer>
@@ -45,4 +45,4 @@ const Media = ({ offset, speed, factor = 1 }: RotationsProps) => {
   );
 };
 
-export default Media;
+export default CMA;

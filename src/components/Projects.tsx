@@ -7,6 +7,7 @@ import Container from "./Container";
 import ProjectCard from "./ProjectCard";
 import data from "../data/data.yaml";
 import { media } from "../constants/breakpoints";
+import Section from "./Section";
 
 type RotationsProps = {
   offset: number;
@@ -44,10 +45,17 @@ const CMA = ({ offset, speed, factor = 1 }: RotationsProps) => {
         bgColor={bgColor}
       />
       <Layer offset={offset} speed={speed - 0.2} factor={factor}>
-        <ProjectContainer>
-          <ProjectCard {...projects[0]} background={grad1} />
-          <ProjectCard {...projects[1]} background={grad2} />
-        </ProjectContainer>
+        <Container>
+          <Section
+            title="Projects"
+            Component1={() => (
+              <ProjectCard {...projects[0]} background={grad1} />
+            )}
+            Component2={() => (
+              <ProjectCard {...projects[1]} background={grad2} />
+            )}
+          />
+        </Container>
       </Layer>
     </>
   );
