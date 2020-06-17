@@ -5,6 +5,8 @@ export const colorDefs = {
   mango: "#FAC45D",
   viking: "#54BCDD",
   shamrock: "#4ED0A1",
+  royalBlue: "#5d51ea",
+  carnationPink: "#FFA3DF",
 };
 
 export const COLORS = {
@@ -31,6 +33,10 @@ export const COLORS = {
   accent1: {
     light: colorDefs.pink,
     dark: colorDefs.aquaMarine,
+  },
+  accent2: {
+    light: colorDefs.royalBlue,
+    dark: colorDefs.carnationPink,
   },
 };
 

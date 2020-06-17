@@ -80,12 +80,17 @@ const SubContent = styled.div`
 `;
 
 const HighlightedText = styled.span`
-  color: pink;
+  color: ${({ theme }) => theme.colors.accent2};
+`;
+
+const Link = styled.a`
+  color: ${({ theme }) => theme.colors.accent2};
 `;
 
 const components = {
   ul: List,
   highlight: HighlightedText,
+  a: Link,
 };
 
 const Section = ({

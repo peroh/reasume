@@ -8,6 +8,7 @@ export const theme = {
     primary: "var(--color-primary)",
     text: "var(--color-text)",
     accent1: "var(--color-accent1)",
+    accent2: "var(--color-accent2)",
   },
   gradients: {
     grad1: `linear-gradient(90deg, ${colorDefs.roman} 0%, ${colorDefs.mango} 100%)`,
