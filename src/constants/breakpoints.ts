@@ -20,9 +20,9 @@ export const mediaSizes: MediaSizes = {
 
 /* Source: Spacely */
 export const media = mapValues(breakpoints, (width) => ({
-  css: (...args: TemplateStringsArray) => css`
+  css: (...args: [TemplateStringsArray]) => css`
     @media (min-width: ${width}px) {
-      ${css(args)}
+      ${css(...args)}
     }
   `,
 }));
