@@ -6,7 +6,6 @@ import { mediaSizes } from "../constants/breakpoints";
 import { getFactor } from "../utils/helpers";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
-// import Rotations from '../components/Rotations';
 import Media from "../components/Media";
 import Spacely from "../components/Spacely";
 import CMA from "../components/CMA";
