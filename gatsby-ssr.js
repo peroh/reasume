@@ -13,18 +13,14 @@ function setColorsByTheme() {
   const colorModeKey = "🗝";
   const colorModeCssProp = "💥";
 
-  const mql = window.matchMedia("(prefers-color-scheme: dark)");
-  const prefersDarkFromMQ = mql.matches;
   const persistedPreference = localStorage.getItem(colorModeKey);
 
-  let colorMode = "light";
+  let colorMode = "dark";
 
   const hasUsedToggle = typeof persistedPreference === "string";
 
   if (hasUsedToggle) {
     colorMode = persistedPreference;
-  } else {
-    colorMode = prefersDarkFromMQ ? "dark" : "light";
   }
 
   let root = document.documentElement;
