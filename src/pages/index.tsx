@@ -12,7 +12,7 @@ import Spacely from "../components/Spacely";
 import CMA from "../components/CMA";
 import Projects from "../components/Projects";
 import More from "../components/More";
-import Contact from "../components/Contact";
+import Contact from "../components/Footer";
 
 interface IndexPageProps {
   data: {

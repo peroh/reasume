@@ -4,7 +4,7 @@ import styled, { ThemeContext } from "styled-components";
 import Layer from "./Layer";
 import { breakpoints } from "../constants/breakpoints";
 import Wave from "../images/wave.svg";
-import DarkModeToggle from "../components/DarkModeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 
 type RotationsProps = {
   offset: number;
