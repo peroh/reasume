@@ -23,7 +23,6 @@ const TitleContainer = styled.div`
   justify-content: space-between;
 
   svg {
-    width: 2.5rem;
     margin-left: 0.25rem;
   }
 `;
