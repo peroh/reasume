@@ -2,13 +2,9 @@ import React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 
 import Layer from "./Layer";
-import { shapes } from "../constants/shapes";
-import Container from "./Container";
-import ProjectCard from "./ProjectCard";
-import data from "../data/data.yaml";
-import { media, breakpoints } from "../constants/breakpoints";
-import Section from "./Section";
+import { breakpoints } from "../constants/breakpoints";
 import Wave from "../images/wave.svg";
+import DarkModeToggle from "../components/DarkModeToggle";
 
 type RotationsProps = {
   offset: number;
@@ -32,26 +28,44 @@ const ContactLayer = styled(Layer)`
 
 const Links = styled.div`
   display: flex;
-  margin-bottom: 1rem;
-  z-index: 1;
+  width: 10rem;
+  justify-content: space-between;
   a {
     color: ${({ theme }) => theme.colors.text};
-    margin-right: 1rem;
+    text-align: center;
+    white-space: nowrap;
   }
+  margin-bottom: 2rem;
+`;
+
+const Info = styled.div`
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+`;
+
+const Toggle = styled.div`
+  margin-bottom: 3rem;
 `;
 
 const Contact = ({ offset, speed, factor = 1 }: RotationsProps) => {
   return (
     <>
       <ContactLayer offset={offset} speed={speed} factor={factor}>
-        <Links>
-          <a href="https://cara.lekoarts.de/" target="_blank">
-            Design inspo
-          </a>
-          <a href="https://github.com/peroh/reasume/" target="_blank">
-            Source
-          </a>
-        </Links>
+        <Info>
+          <Toggle>
+            <DarkModeToggle />
+          </Toggle>
+          <Links>
+            <a href="https://cara.lekoarts.de/" target="_blank">
+              Design inspo
+            </a>
+            <a href="https://github.com/peroh/reasume/" target="_blank">
+              Source
+            </a>
+          </Links>
+        </Info>
         <StyledWave />
       </ContactLayer>
     </>
