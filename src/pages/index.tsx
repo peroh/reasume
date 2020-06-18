@@ -31,14 +31,12 @@ const FACTORS = {
 };
 
 const Main = (props: IndexPageProps, context: any) => {
-  const parallax = useRef(null);
-  const scroll = (to: number) => parallax.current.scrollTo(to);
   const { matches } = useMediaQueries(mediaSizes);
 
   return (
     <>
       <Layout>
-        <Parallax pages={7} ref={parallax}>
+        <Parallax pages={7}>
           <Hero offset={0} speed={0.2} />
           <Media
             offset={1}
