@@ -21,10 +21,12 @@ const HeroContainer = styled(Container)`
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 
   ${media.md.css`
     justify-content: flex-start;
     flex-direction: row;
+    text-align: left;
   `}
 `;
 
