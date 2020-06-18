@@ -29,7 +29,7 @@ const ProjectContainer = styled(Container)`
 
 const { diagonalPolygonRight } = shapes;
 
-const CMA = ({ offset, speed, factor = 1 }: RotationsProps) => {
+const Projects = ({ offset, speed, factor = 1 }: RotationsProps) => {
   const styledContext = useContext(ThemeContext);
   const bgColor = styledContext.colors.bgTertiary;
   const { grad1, grad2 } = styledContext.gradients;
@@ -61,4 +61,4 @@ const CMA = ({ offset, speed, factor = 1 }: RotationsProps) => {
   );
 };
 
-export default CMA;
+export default Projects;

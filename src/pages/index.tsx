@@ -14,6 +14,7 @@ import CMA from "../components/CMA";
 import Projects from "../components/Projects";
 import More from "../components/More";
 import DarkModeToggle from "../components/DarkModeToggle";
+import Contact from "../components/Contact";
 
 interface IndexPageProps {
   data: {
@@ -73,6 +74,7 @@ const Main = (props: IndexPageProps, context: any) => {
             speed={matches.mobile ? 1 : 0}
             factor={getFactor(1, matches, FACTORS)}
           />
+          <Contact offset={6} speed={matches.mobile ? 1 : 0} factor={1} />
         </Parallax>
       </Layout>
       <Toggle>
